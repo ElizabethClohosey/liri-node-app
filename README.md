@@ -43,17 +43,17 @@ Below you will find a guide to help you get started and teach you how to run **_
  - Elizabeth Clohosey
     - [Git Hub Profile](https://github.com/ElizabethClohosey)
     - [LinkedIn Profile](https://www.linkedin.com/in/elizabeth-clohosey-r-t-r-m-arrt-10233a185/)
-    - [Email](elizabethclohosey@gmail.com)
+    - [Email]()
     
 ### Helpful Links
-  - NodeJs Link()
-  - Dot-env NPM Link()
-  - Spotify API()
-  - Node-Spotify-API Module()
-  - OMDB API()
-  - OMDB NPM Module()
-  - Band In Town API()
-  - Bands In Town NPM Module()
-  - Moment NPM Module()
+  - [NodeJs Link]()
+  - [Dot-env NPM Link]()
+  - [Spotify API]()
+  - [Node-Spotify-API Module]()
+  - [OMDB API]()
+  - [OMDB NPM Module]()
+  - [Band In Town API]()
+  - [Bands In Town NPM Module]()
+  - [Moment NPM Module]()
   
  
