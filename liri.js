@@ -17,12 +17,42 @@
 // Then run a request with axios to the OMDB API with the movie specified
 axios.get("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=defd7e02").then(
   function(response) {
-    console.log("The movie's rating is: " + response.data.imdbRating);
+    console.log("The movie's name is: " + response.data.Title);
+    console.log("The movie's release year is: " + response.data.Year);
+    console.log("The movie's imbd rating is: " + response.data.imdbRating);
+    // console.log("The movie's Rotten Tomatoes rating is: " + response.data.);
+    console.log("The movie's Country of origin is: " + response.data.Country);
+    console.log("The movie's language is: " + response.data.Language);
+    console.log("The movie's plot is: " + response.data.Plot);
+    console.log("The movie's cast is: " + response.data.Actors);
   }), function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
   }
+
+
+  function helpMe (songName) { console.log(userInput, "user Input")
+  // spotify search (find this in spotify docs)
+  spotify.search({ 
+    type: 'track', 
+    query: userInput, 
+    limit: 3,
+  }, function(err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    }
+  
+    // console.log(data); 
+    data.tracks.items.map(item => {
+      console.log(item.artists);
+      console.log(item.external_urls.spotify);
+      console.log(item.artists);
+      console.log(item.artists);
+    })
+  });
+}  
+helpMe();
 
 
 
@@ -43,17 +73,3 @@ axios.get("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=defd
   // }
   
 
-//   function helpMe (songName) {
-//     // spotify search (find this in spotify docs)
-//   spotify.search({ 
-//     type: 'track', 
-//     query: 'All the small things', 
-//   }, function(err, data) {
-//     if (err) {
-//       return console.log('Error occurred: ' + err);
-//     }
-   
-//   console.log(data); 
-//   });
-// }  
-//   helpMe();
