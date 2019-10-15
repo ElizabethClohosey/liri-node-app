@@ -32,7 +32,8 @@ axios.get("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=defd
   }
 
 
-  function helpMe (songName) { console.log(userInput, "user Input")
+  function helpMe (songName) { 
+    // console.log(userInput, "user Input")
   // spotify search (find this in spotify docs)
   spotify.search({ 
     type: 'track', 
@@ -45,10 +46,14 @@ axios.get("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=defd
   
     // console.log(data); 
     data.tracks.items.map(item => {
-      console.log(item.artists);
-      console.log(item.external_urls.spotify);
-      console.log(item.artists);
-      console.log(item.artists);
+      // console.log(item)
+      // console.log(item.album.artists.external_urls.name);
+      // console.log(item.album);
+
+      // These console logs work 
+      console.log(item.name);
+      console.log(item.external_urls);
+
     })
   });
 }  
