@@ -3,7 +3,14 @@
 
   var keys = require("./keys.js");
   // console.log("These are all my keys", keys);
-
+  
+  var axios = require("axios");
+  var bandsintown = require("bandsintown-rest");
+  // var omdb = require('omdb');
+  
+  // variable for user command (movie-this, conert-this, spotify-this, do-what-it-says)
+  var command = process.argv[2];
+  var userInput = process.argv[3];
   // imports the node-spotify-api NPM package
   var Spotify = require("node-spotify-api");
 
@@ -11,33 +18,28 @@
   var spotify = new Spotify(keys.spotify)  
   // console.log("Spotify keys", spotify);
 
-  var axios = require("axios");
-  var bandsintown = require("bandsintown-rest");
-
-  var command = process.argv[2];
-  var userInput = process.argv[3];
 
 
-// Request with axios to the OMDB API with the movie specified
-switch (command) {
+  switch (command) {
 
-  case "movie-this":
+    case "movie-this":
 
-axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.omdb.key}`).then(
-  function(response) {
-    console.log(`The movie name is: ${response.data.Title}`);
-    console.log(`The movie release year is: ${response.data.Year}`); 
-    console.log(`The movie's imbd rating is: ${ response.data.imdbRating}`);
-    console.log("The movie's Rotten Tomatoes rating is: " + response.data.Ratings[1].Value);
-    console.log(`The movie's Country of origin is: ${response.data.Country}`);
-    console.log(`The movie's language is: ${response.data.Language}`);
-    console.log(`The movie's plot is: ${response.data.Plot}`);
-    console.log(`The movie's cast is: ${response.data.Actors}`);
-  }), function(err, data) {
-        if (err) {
-          return console.log('Error occurred: ' + err);
+    // Request with axios to the OMDB API using userInput
+    axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.omdb.key}`).then(
+      function(response) {
+        console.log(`The movie name is: ${response.data.Title}`);
+        console.log(`The movie release year is: ${response.data.Year}`); 
+        console.log(`The movie's IMBD rating is: ${ response.data.imdbRating}`);
+        console.log(`The movie's Rotten Tomatoes rating is: ${response.data.Ratings[1].Value}`);
+        console.log(`The movie's Country of origin is: ${response.data.Country}`);
+        console.log(`The movie's language is: ${response.data.Language}`);
+        console.log(`The movie's plot is: ${response.data.Plot}`);
+        console.log(`The movie's cast is: ${response.data.Actors}`);
+      }), function(err, data) {
+            if (err) {
+              return console.log('Error occurred: ' + err);
+            }
         }
-    }
     break;
 
     case "concert-this":
