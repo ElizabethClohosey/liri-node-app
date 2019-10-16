@@ -28,7 +28,7 @@ axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.o
     console.log("The movie's name is: " + response.data.Title);
     console.log("The movie's release year is: " + response.data.Year);
     console.log("The movie's imbd rating is: " + response.data.imdbRating);
-    // console.log("The movie's Rotten Tomatoes rating is: " + response.data.);
+    // console.log("The movie's Rotten Tomatoes rating is: " + response.data.ratings[1].val);
     console.log("The movie's Country of origin is: " + response.data.Country);
     console.log("The movie's language is: " + response.data.Language);
     console.log("The movie's plot is: " + response.data.Plot);
@@ -92,13 +92,16 @@ axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.o
 
 
 
+              // to do 
+    // work on bandsintown date 
+    // finsh spotify-this-song
+    // add do-what-it-says
+   // finish readme
+    // add links
+    // add photos, gifs or video
 
 
-
-
-
-
-            // Saved code for possible later use 
+        // Saved code for possible later use 
                         
 
   
