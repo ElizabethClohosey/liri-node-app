@@ -25,14 +25,14 @@ switch (command) {
 
 axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.omdb.key}`).then(
   function(response) {
-    console.log("The movie's name is: " + response.data.Title);
-    console.log("The movie's release year is: " + response.data.Year);
-    console.log("The movie's imbd rating is: " + response.data.imdbRating);
-    // console.log("The movie's Rotten Tomatoes rating is: " + response.data.ratings[1].val);
-    console.log("The movie's Country of origin is: " + response.data.Country);
-    console.log("The movie's language is: " + response.data.Language);
-    console.log("The movie's plot is: " + response.data.Plot);
-    console.log("The movie's cast is: " + response.data.Actors);
+    console.log(`The movie name is: ${response.data.Title}`);
+    console.log(`The movie release year is: ${response.data.Year}`); 
+    console.log(`The movie's imbd rating is: ${ response.data.imdbRating}`);
+    console.log("The movie's Rotten Tomatoes rating is: " + response.data.Ratings[1].Value);
+    console.log(`The movie's Country of origin is: ${response.data.Country}`);
+    console.log(`The movie's language is: ${response.data.Language}`);
+    console.log(`The movie's plot is: ${response.data.Plot}`);
+    console.log(`The movie's cast is: ${response.data.Actors}`);
   }), function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
@@ -45,9 +45,9 @@ axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.o
     axios.get(`https://rest.bandsintown.com/artists/${userInput}/events?app_id=${keys.bandsintown}`).then(
       function(response) {
         for (let i = 0; i < 4; i++) {
-          console.log("The name of venue is " + response.data[i].venue.name);
-          console.log("The venue location is " + response.data[i].venue.city);
-          console.log("The date of event " + response.data[i].venue.datetime);
+          console.log(`The name of venue is: ${response.data[i].venue.name}`);
+          console.log(`The venue location is: ${response.data[i].venue.city}`);
+          console.log(`The date of event: ${response.data[i].venue.datetime}`);
         }
       }), function(err, data) {
           if (err) {
@@ -58,7 +58,7 @@ axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.o
 
     case "spotify-this-song":
 
-        function helpMe (songName) { 
+        function songName (songName) { 
           // console.log(userInput, "user Input")
         // spotify search (find this in spotify docs)
         spotify.search({ 
@@ -73,36 +73,70 @@ axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.o
           // console.log(data); 
           data.tracks.items.map(item => {
             // console.log(item)
-            // console.log(item.album.artists.external_urls.name);
-            // console.log(item.album);
-      
-            // These console logs work 
             console.log(item.name);
             console.log(item.external_urls);
-      
           })
         });
       }  
-      helpMe();
+      songName();
 
       break;
 }
 
 
+// =======================================================================
 
+                      // to do 
 
-
-              // to do 
-    // work on bandsintown date 
-    // finsh spotify-this-song
+    // bandsintown concert-this
+       // - date 
+    // spotify spotify-this-song
+       // - artists
+       // - check about preview link
+       // - album
     // add do-what-it-says
-   // finish readme
+    // finish readme
     // add links
     // add photos, gifs or video
 
+                    // readme checklist 
 
-        // Saved code for possible later use 
-                        
+    // 1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
+    // 2. Give a high-level overview of how the app is organized
+    // 3. Give start-to-finish instructions on how to run the app
+    // 4. Include screenshots, gifs or videos of the app functioning
+    // 5. Contain a link to a deployed version of the app
+    // 6. Clearly list the technologies used in the app
+    // 7. State your role in the app development
+
+// ***************************************************************************
+
+                  // Saved code for possible later use 
+
+  //   function songName (songName) {
+  //     spotify
+  //     .search({ 
+  //       type: 'track', 
+  //       query: 'All the Small Things' 
+  //     }).then(function(response) {
+  //       console.log(response);
+  //     }).catch(function(err) {
+  //       console.log(`Error occurred: ${err}`);
+  //     });
+
+  //     data.tracks.items.map(item => {
+  //       // console.log(item)
+  //       console.log(item.name);
+  //       console.log(item.external_urls);
+  
+  //     });
+  // }
+
+  // ?????????????????????????????????????????????????????????????????????????
+
+                      // Questions 
+
+    // no axios for spotify because we are using a package from spotify API?
 
   
 
