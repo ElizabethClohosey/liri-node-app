@@ -23,7 +23,7 @@ switch (command) {
 
   case "movie-this":
 
-axios.get("http://www.omdbapi.com/?t=" + userInput + ";&y=&plot=short&apikey=defd7e02").then(
+axios.get("http://www.omdbapi.com/?t=" + userInput + ";&y=&plot=short&apikey=").then(
   function(response) {
     console.log("The movie's name is: " + response.data.Title);
     console.log("The movie's release year is: " + response.data.Year);
@@ -42,7 +42,7 @@ axios.get("http://www.omdbapi.com/?t=" + userInput + ";&y=&plot=short&apikey=def
 
     case "concert-this":
 
-    axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(
+    axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=").then(
       function(response) {
         for (let i = 0; i < 4; i++) {
           console.log("The name of venue is " + response.data[i].venue.name);
