@@ -71,12 +71,13 @@
           if (err) {
             return console.log('Error occurred: ' + err);
           }
-        
           // console.log(data); 
           data.tracks.items.map(item => {
-            // console.log(item)
+            // console.log(item);
             console.log(item.name);
             console.log(item.external_urls);
+            console.log(item.album.artists[0].name);
+            console.log(item.album.name);
           })
         });
       }  
@@ -93,15 +94,13 @@
     // bandsintown concert-this
        // - date 
     // spotify spotify-this-song
-       // - artists
        // - check about preview link
-       // - album
     // add do-what-it-says
     // finish readme
-    // add links
-    // add photos, gifs or video
+        // add links
+        // add photos, gifs or video
 
-                    // readme checklist 
+        // readme checklist 
 
     // 1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
     // 2. Give a high-level overview of how the app is organized
@@ -138,7 +137,6 @@
 
                       // Questions 
 
-    // no axios for spotify because we are using a package from spotify API?
-
+    // is my track preview link ok?
   
 
