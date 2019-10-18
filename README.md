@@ -78,7 +78,6 @@ Below you will find a guide to help you get started and teach you how to run **_
  - Elizabeth Clohosey
     - [Git Hub Profile](https://github.com/ElizabethClohosey)
     - [LinkedIn Profile](https://www.linkedin.com/in/elizabeth-clohosey-r-t-r-m-arrt-10233a185/)
-    - [Email]()
     
 ### Helpful Links
   - [NodeJs Link](https://nodejs.org/en/)
