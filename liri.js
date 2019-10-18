@@ -49,7 +49,7 @@
         for (let i = 0; i < 4; i++) {
           console.log(`The name of venue is: ${response.data[i].venue.name}`);
           console.log(`The venue location is: ${response.data[i].venue.city}`);
-          console.log(`The date of event: ${response.data[i].venue.datetime}`);
+          console.log(`The date of event: ${response.data[i].datetime}`);
         }
       }), function(err, data) {
           if (err) {
@@ -92,7 +92,7 @@
                       // to do 
 
     // bandsintown concert-this
-       // - date 
+       // - add moment to date 
     // spotify spotify-this-song
        // - check about preview link
     // add do-what-it-says
