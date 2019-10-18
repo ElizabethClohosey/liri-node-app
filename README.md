@@ -65,14 +65,17 @@ Below you will find a guide to help you get started and teach you how to run **_
 ### Built With 
   - JavaScript
   - NodeJS
-  - Axios
+  - Axios NPM
   - VSC Terminal
   - Git Bash
-  - Dot-env NPM Module
-  - Node-spotify-api NPM Module 
+  - Dot-env NP
+  - Spotify API
+  - Node-spotify-api NPM
+  - OMDB API
   - OMDB NPM Module
-  - Bands In Town NPM Module 
-  - Moment NPM Module
+  - Bands In Town API
+  - Bands In Town NPM
+  - Moment NPM
 
 ### Author 
  - Elizabeth Clohosey
