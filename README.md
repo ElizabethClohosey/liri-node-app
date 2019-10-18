@@ -1,6 +1,16 @@
+
+ 
  # LIRI NODE APP
  
- **_Liri_** is a language interpretation and recognition interface.  It is being used in the command line to.  This app uses the Spotify API, OBDB API and Bands In Town API to display information about movies, bands, artists, concerts, and music.
+ **_Liri_** is a language interpretation and recognition interface.  It is being used in the command line to.  This app uses the Spotify API, OBDB API and Bands In Town API to display information about movies, bands, artists, concerts, and music.  The user has the option of using four commands (listed below) in conjuntion with specific parameters associated with the commands. The Commands are:
+
+ concert-this
+
+ spotify-this-song
+
+ movie-this
+
+ do-what-it-says
  
  ## Getting Started 
 
@@ -29,7 +39,6 @@ Below you will find a guide to help you get started and teach you how to run **_
   - NodeJS
   - VSC Terminal
   - Git Bash
-  - NPM
   - Dot-env NPM Module
   - Node-spotify-api NPM Module 
   - OMDB NPM Module
