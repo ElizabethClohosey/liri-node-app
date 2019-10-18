@@ -75,10 +75,10 @@
           // console.log(data); 
           data.tracks.items.map(item => {
             // console.log(item);
-            console.log(item.name);
-            console.log(item.external_urls);
-            console.log(item.album.artists[0].name);
-            console.log(item.album.name);
+            console.log(`Song name: ${item.name}`);
+            console.log(`Artist name: ${item.album.artists[0].name}`);
+            console.log(`Album name: ${item.album.name}`);
+            console.log(`Song preview url: ${item.preview_url}`);
           })
         });
       }  
@@ -92,8 +92,6 @@
 
                       // to do 
 
-    // spotify spotify-this-song
-       // - check about preview link
     // add do-what-it-says
     // finish readme
         // add links
@@ -101,41 +99,15 @@
 
         // readme checklist 
 
-    // 1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
     // 2. Give a high-level overview of how the app is organized
-    // 3. Give start-to-finish instructions on how to run the app
-    // 4. Include screenshots, gifs or videos of the app functioning
-    // 5. Contain a link to a deployed version of the app
-    // 6. Clearly list the technologies used in the app
-    // 7. State your role in the app development
+
 
 // ***************************************************************************
 
-                  // Saved code for possible later use 
-
-  //   function songName (songName) {
-  //     spotify
-  //     .search({ 
-  //       type: 'track', 
-  //       query: 'All the Small Things' 
-  //     }).then(function(response) {
-  //       console.log(response);
-  //     }).catch(function(err) {
-  //       console.log(`Error occurred: ${err}`);
-  //     });
-
-  //     data.tracks.items.map(item => {
-  //       // console.log(item)
-  //       console.log(item.name);
-  //       console.log(item.external_urls);
-  
-  //     });
-  // }
 
   // ?????????????????????????????????????????????????????????????????????????
 
                       // Questions 
 
-    // is my track preview link ok?
-  
+
 
