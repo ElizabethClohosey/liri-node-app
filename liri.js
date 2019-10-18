@@ -5,9 +5,10 @@
   // console.log("These are all my keys", keys);
   
   var axios = require("axios");
-  var bandsintown = require("bandsintown-rest");
+  // var bandsintown = require("bandsintown-rest");
   // var omdb = require('omdb');
-  
+  var moment = require("moment");
+
   // variable for user command (movie-this, conert-this, spotify-this, do-what-it-says)
   var command = process.argv[2];
   var userInput = process.argv[3];
@@ -17,8 +18,6 @@
   // initializes the spotify API client using client id and secret
   var spotify = new Spotify(keys.spotify)  
   // console.log("Spotify keys", spotify);
-
-
 
   switch (command) {
 
@@ -49,7 +48,9 @@
         for (let i = 0; i < 4; i++) {
           console.log(`The name of venue is: ${response.data[i].venue.name}`);
           console.log(`The venue location is: ${response.data[i].venue.city}`);
-          console.log(`The date of event: ${response.data[i].datetime}`);
+          var concertDate = moment(response.data[i].datetime);
+          var formatedConcertDate = concertDate.format("MM/DD/YYYY");
+          console.log(`The date of event: ${formatedConcertDate}`);
         }
       }), function(err, data) {
           if (err) {
@@ -60,7 +61,7 @@
 
     case "spotify-this-song":
 
-        function songName (songName) { 
+        function songName () { 
           // console.log(userInput, "user Input")
         // spotify search (find this in spotify docs)
         spotify.search({ 
@@ -91,8 +92,6 @@
 
                       // to do 
 
-    // bandsintown concert-this
-       // - add moment to date 
     // spotify spotify-this-song
        // - check about preview link
     // add do-what-it-says
