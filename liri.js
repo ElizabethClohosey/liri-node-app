@@ -90,16 +90,18 @@
       break;
 
       case "do-what-it-says":
-
-      function randomText() {
-        fs.readFile('random.txt', 'utf8', function(err,data) {
-          if (err) {
-            return console.log(err);
-          }
-        })
-        
-      }
-      randomText();
+      // console.log("Trying to fix what it says: ", command);
+      // console.log("Trying to fix what it says: ", userInput);
+        function randomText() {
+          fs.readFile('random.txt', 'utf8', function(err, data) {
+            if (err) {
+              return console.log(err);
+            }
+            console.log(data);
+          })
+          
+        }
+        randomText();
 
       break;
   }
