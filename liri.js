@@ -19,6 +19,7 @@
   var spotify = new Spotify(keys.spotify)  
   // console.log("Spotify keys", spotify);
 
+  function runSwitch (command, userInput) {
   switch (command) {
 
     case "movie-this":
@@ -78,33 +79,39 @@
           // console.log(data); 
           data.tracks.items.map(item => {
             // console.log(item);
+            console.log(`************ New Song ************`);
             console.log(`Song name: ${item.name}`);
             console.log(`Artist name: ${item.album.artists[0].name}`);
             console.log(`Album name: ${item.album.name}`);
-            console.log(`Song preview url: ${item.preview_url}`);
+            console.log(`Song preview url: ${item.preview_url}\n`);
           })
         });
       }  
       songName();
 
       break;
-
-      case "do-what-it-says":
+    }
+  }
+      if (command !== "do-what-it-says") {
+        runSwitch(command, userInput)
+      }
+      else {
       // console.log("Trying to fix what it says: ", command);
       // console.log("Trying to fix what it says: ", userInput);
-        function randomText() {
           fs.readFile('random.txt', 'utf8', function(err, data) {
             if (err) {
               return console.log(err);
             }
+            var input = data.split(",")
+            var doItCommand = input[0]
+            var doItInput = input[1]
+            runSwitch(doItCommand, doItInput);
+
             console.log(data);
           })
-          
-        }
-        randomText();
-
-      break;
-  }
+      }
+    
+  
   
 //====================================================================
 
