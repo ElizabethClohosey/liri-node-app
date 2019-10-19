@@ -8,13 +8,13 @@
   // var bandsintown = require("bandsintown-rest");
   // var omdb = require('omdb');
   var moment = require("moment");
+  var fs = require("fs");
 
   // variable for user command (movie-this, conert-this, spotify-this, do-what-it-says)
   var command = process.argv[2];
   var userInput = process.argv[3];
   // imports the node-spotify-api NPM package
   var Spotify = require("node-spotify-api");
-
   // initializes the spotify API client using client id and secret
   var spotify = new Spotify(keys.spotify)  
   // console.log("Spotify keys", spotify);
@@ -62,6 +62,9 @@
     case "spotify-this-song":
 
         function songName () { 
+          if (userInput === undefined) {
+            userInput = "The Sign"; //default Song
+        }
           // console.log(userInput, "user Input")
         // spotify search (find this in spotify docs)
         spotify.search({ 
@@ -85,29 +88,34 @@
       songName();
 
       break;
-}
 
+      case "do-what-it-says":
 
-// ====================================================================
+      function randomText() {
+        fs.readFile('random.txt', 'utf8', function(err,data) {
+          if (err) {
+            return console.log(err);
+          }
+        })
+        
+      }
+      randomText();
+
+      break;
+  }
+  
+//====================================================================
 
                       // to do 
 
-    // add do-what-it-says
+    // fix do-what-it-says
     // finish readme
-        // add links
-        // add photos, gifs or video
-
-        // readme checklist 
-
-    // 2. Give a high-level overview of how the app is organized
-
-
-// ***************************************************************************
-
+        // 
+        //video
 
   // ?????????????????????????????????????????????????????????????????????????
 
                       // Questions 
 
-
+  // The sign by Ace of Base??? 
 
