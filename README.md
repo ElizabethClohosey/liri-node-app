@@ -12,6 +12,8 @@
 
  * do-what-it-says
  
+ [**Click here for a demo of _Liri_ in action**](https://youtu.be/y0QbWPcYGxo)
+ 
  ## Getting Started 
 
 Below you will find a guide to help you get started and teach you how to run **_Liri_**
@@ -75,10 +77,7 @@ Below you will find a guide to help you get started and teach you how to run **_
    Output: The system will read the text in the random.txt file and execute the command        listed in the random.txt file.
    
    <img src="images/do-what-it-says.png" height="400px">
-   
-   **See below for a video demo of how the app works**
-   ADD VIDEO HERE
-
+ 
 ### Built With 
   - JavaScript
   - NodeJS
@@ -111,4 +110,4 @@ Below you will find a guide to help you get started and teach you how to run **_
   - [Bands In Town NPM Module](https://www.npmjs.com/package/bandsintown-rest)
   - [Moment NPM Module](https://www.npmjs.com/package/moment)
   
- 
+   [**Click here for a demo of _Liri_ in action**](https://youtu.be/y0QbWPcYGxo)
