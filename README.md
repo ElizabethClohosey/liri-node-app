@@ -34,31 +34,38 @@ Below you will find a guide to help you get started and teach you how to run **_
    **Example 1:** Run the ```concert-this``` command
    
    ``` 
-   node liri.js concert-this <name of artist or band> 
+   node liri.js concert-this <"name of artist or band"> 
    ```
    Output: The system will display a list of the next 3 events, dates of events and            locations of events where the artist or band will performing.
    
-   ![](link-to-image)
+   <img src="images/concert-this.png" height="400px">
+
    
    **Example 2:** Run the ```movie-this``` command 
    
    ```
-   node liri.js movie-this <name of movie>
+   node liri.js movie-this <"name of movie">
    ```
    Output: The system will display the Title, Release Year, IMDB Rating, Rotten Tomatoes      Rating, Country or Production, Language, Plot and Actors associated with the movie. If no specific movie is defined after ```spotify-this-song``` command, it will display results for "Mr Nobody" as default movie.
    
-   ![Image description](link-to-image)
-   ![Image description](link-to-image)
+   **Displayig Results For The Movie "My Cousin Vinny" Being Searched By User**
+   <img src="images/movie-this.png" height="400px">
+   
+   **Displaying Results For Default Movie - "Mr Nobody"**
+   <img src="images/movie-this-default.png" height="400px">
    
    **Example 3:** Run the ```spotify-this-song``` command 
    
    ```
-   node liri.js spotify-this-song <name of song> 
+   node liri.js spotify-this-song <"name of song"> 
    ```
    Output: The system will display 3 song names that best match the search criteia.  It        will also display the artist(s) name, a link to preview the song, and the album the song    is on. If no specific song is defined after ```spotify-this-song``` command, it will display results for "The Sign" as default song.   
    
-   ![Image description](link-to-image)
-   ![Image description](link-to-image)
+   **Displaying Results For Song "Like I'm Gonna Lose You" Being Searched By User**
+   <img src="images/spotify-this-song.png" height="400px">
+   
+   **Displaying Results For Default Song - "The Sign"**
+   <img src="images/spotify-this-song-default.png" height="400px">
    
    **Example 4:** Run the ```do-what-it-says``` command
    
@@ -67,7 +74,7 @@ Below you will find a guide to help you get started and teach you how to run **_
    ``` 
    Output: The system will read the text in the random.txt file and execute the command        listed in the random.txt file.
    
-   ![Image description](link-to-image)
+   <img src="images/do-what-it-says.png" height="400px">
    
    **See below for a video demo of how the app works**
    ADD VIDEO HERE
