@@ -38,12 +38,16 @@ Below you will find a guide to help you get started and teach you how to run **_
    ```
    Output: The system will display a list of the next 3 events, dates of events and            locations of events where the artist or band will performing.
    
+   ![Image description](link-to-image)
+   
    **Example 2:** Run the ```movie-this``` command 
    
    ```
    node liri.js movie-this <name of movie>
    ```
    Output: The system will display the Title, Release Year, IMDB Rating, Rotten Tomatoes      Rating, Country or Production, Language, Plot and Actors associated with the movie. 
+   
+   ![Image description](link-to-image)
    
    **Example 3:** Run the ```spotify-this-song``` command 
    
@@ -52,12 +56,16 @@ Below you will find a guide to help you get started and teach you how to run **_
    ```
    Output: The system will display 3 song names that best match the search criteia.  It        will also display the artist(s) name, a link to preview the song, and the album the song    is on.  
    
+   ![Image description](link-to-image)
+   
    **Example 4:** Run the ```do-what-it-says``` command
    
    ```
    node liri.js do-what-it-says
    ``` 
    Output: The system will read the text in the random.txt file and execute the command        listed in the random.txt file.
+   
+   ![Image description](link-to-image)
    
    **See below for a video demo of how the app works**
    ADD VIDEO HERE
