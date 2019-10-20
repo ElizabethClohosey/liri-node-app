@@ -38,13 +38,13 @@
       // Request with axios to the Bands In Town API for concert-this command and user search input
       case "concert-this":
 
-      axios.get(`https://rest.bandsintown.com/artists/${userInput}/events?app_id=${keys.bandsintown}`).then(
+      axios.get(`https://rest.bandsintown.com/artists/OAR/events?app_id=codingbootcamp`).then(
         function(response) {
           for (let i = 0; i < 3; i++) {
             var concertDate = moment(response.data[i].datetime);
             var formatedConcertDate = concertDate.format("MM/DD/YYYY");
             console.log(`\n************ Concert Information ************\n`);
-            console.log(`Venue Name: ${response.data[i].venue.name} \nVenue location: ${response.data[i].venue.city} \nDate of event: ${formatedConcertDate}`);
+            console.log(`Venue Name: ${response.data[i].venue.name} \nVenue location: ${response.data[i].venue.city}, ${response.data[i].venue.region} \nDate of event: ${formatedConcertDate}`);
           }
         }), function(err) {
             if (err) {
