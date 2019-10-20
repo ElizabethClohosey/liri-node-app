@@ -93,18 +93,17 @@
       // Code for do-what-it-says command
       if (command !== "do-what-it-says") {
         runSwitch(command, userInput)
-      }
-      else {
-          fs.readFile('random.txt', 'utf8', function(err, data) {
-            if (err) {
-              return console.log(err);
-            }
-            var input = data.split(",")
-            var doItCommand = input[0]
-            var doItInput = input[1]
-            runSwitch(doItCommand, doItInput);
-            console.log(data);
-          })
+      } else {
+        fs.readFile('random.txt', 'utf8', function(err, data) {
+          if (err) {
+            return console.log(err);
+          }
+          var input = data.split(",")
+          var doItCommand = input[0]
+          var doItInput = input[1]
+          runSwitch(doItCommand, doItInput);
+          console.log(data);
+        })
     }
     
   
