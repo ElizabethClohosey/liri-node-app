@@ -44,18 +44,23 @@
       // Request with axios to the Bands In Town API for concert-this command and user search input
       case "concert-this":
 
-      if (userInput === undefined) {
+      if (userInput === undefined){
         console.log("Please enter a band or artist to search for concert information");
       } else {
         axios.get(`https://rest.bandsintown.com/artists/${userInput}/events?app_id=${keys}`).then(
 
         function(response) {
-          for (let i = 0; i < 3; i++) {
-            var concertDate = moment(response.data[i].datetime);
-            var formatedConcertDate = concertDate.format("MM/DD/YYYY");
-            console.log(`\n************ Concert Information ************\n`);
-            console.log(`Venue Name: ${response.data[i].venue.name} \nVenue location: ${response.data[i].venue.city}, ${response.data[i].venue.region} \nDate of event: ${formatedConcertDate}`);
-          }
+          if (concertDate === undefined) {
+            console.log(`No upcoming shows are scheduled`);
+          } else {
+            for (let i = 0; i < 3; i++) {
+              // console.log(response.data[1]);
+              var concertDate = moment(response.data[i].datetime);
+              var formatedConcertDate = concertDate.format("MM/DD/YYYY");
+              console.log(`\n************ Concert Information ************\n`);
+              console.log(`Venue Name: ${response.data[i].venue.name} \nVenue location: ${response.data[i].venue.city}, ${response.data[i].venue.region} \nDate of event: ${formatedConcertDate}`);
+            }
+        }
         }), function(err) {
             if (err) {
               return console.log('Error occurred: ' + err);
