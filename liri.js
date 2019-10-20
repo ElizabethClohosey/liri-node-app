@@ -22,6 +22,11 @@
       // start movie-this code
       case "movie-this":
 
+      // this is the default moive if no user input is added after user command 
+      if (userInput === undefined) {
+        userInput = "Mr Nobody"; //default movie
+      }
+
       // Request with axios to the OMDB API for movie-this command and user search input
       axios.get(`http://www.omdbapi.com/?t=${userInput};&y=&plot=short&apikey=${keys.omdb.key}`).then(
         function(response) {
@@ -33,6 +38,7 @@
                 return console.log('Error occurred: ' + err);
               }
           }
+        
       break;
 
       // Request with axios to the Bands In Town API for concert-this command and user search input
@@ -57,6 +63,7 @@
       case "spotify-this-song":
 
           function songName () { 
+            // this is the default song if no user input is added after user command 
             if (userInput === undefined) {
               userInput = "The Sign"; //default Song
           }
