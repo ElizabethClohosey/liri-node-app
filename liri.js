@@ -97,6 +97,9 @@
           songName();
 
         break;
+
+        default: 
+          console.log(`Sorry, I do not understand this command. Please give me one of the following commands \n"movie-this" followed by your movie of choice \n"concert-this" followed by your band or artist of choice \n"spotify-this song" followed by song of choice \n"do-what-it-says"`);
       }
     }
 
