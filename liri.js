@@ -44,7 +44,11 @@
       // Request with axios to the Bands In Town API for concert-this command and user search input
       case "concert-this":
 
-      axios.get(`https://rest.bandsintown.com/artists/OAR/events?app_id=codingbootcamp`).then(
+      if (userInput === undefined) {
+        console.log("Please enter a band or artist to search for concert information");
+      } else {
+        axios.get(`https://rest.bandsintown.com/artists/${userInput}/events?app_id=${keys}`).then(
+
         function(response) {
           for (let i = 0; i < 3; i++) {
             var concertDate = moment(response.data[i].datetime);
@@ -57,6 +61,7 @@
               return console.log('Error occurred: ' + err);
             }
         }
+      }
       break;
 
       // Request to Spotify API for spotify-this-song command and user search input
