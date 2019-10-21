@@ -53,7 +53,7 @@
 
         function(response) {
           // if statement to log no upcoming shows instead of throwing an error 
-          if (concertDate === undefined) {
+          if (response.data[0] === undefined) {
             console.log(`No upcoming shows are scheduled`);
           } else {
             for (let i = 0; i < 3; i++) {
