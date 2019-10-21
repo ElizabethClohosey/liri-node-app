@@ -41,27 +41,29 @@
         
       break;
 
-      // Request with axios to the Bands In Town API for concert-this command and user search input
+      // Start concert-this code 
       case "concert-this":
 
+      // this message will be shown if user does not add search criteria 
       if (userInput === undefined){
         console.log("Please enter a band or artist to search for concert information");
       } else {
+        // Request with axios to the Bands In Town API for concert-this command and user search input
         axios.get(`https://rest.bandsintown.com/artists/${userInput}/events?app_id=${keys}`).then(
 
         function(response) {
+          // if statement to log no upcoming shows instead of throwing an error 
           if (concertDate === undefined) {
             console.log(`No upcoming shows are scheduled`);
           } else {
             for (let i = 0; i < 3; i++) {
-              // console.log(response.data[1]);
               var concertDate = moment(response.data[i].datetime);
               var formatedConcertDate = concertDate.format("MM/DD/YYYY");
               console.log(`\n************ Concert Information ************\n`);
               console.log(`Venue Name: ${response.data[i].venue.name} \nVenue location: ${response.data[i].venue.city}, ${response.data[i].venue.region} \nDate of event: ${formatedConcertDate}`);
             }
-        }
-        }), function(err) {
+         }
+         }), function(err) {
             if (err) {
               return console.log('Error occurred: ' + err);
             }
@@ -98,6 +100,7 @@
 
         break;
 
+        // statement to be displayed if no command is added by user
         default: 
           console.log(`Sorry, I do not understand this command. Please give me one of the following commands \n"movie-this" followed by your movie of choice \n"concert-this" followed by your band or artist of choice \n"spotify-this song" followed by song of choice \n"do-what-it-says"`);
       }
