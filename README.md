@@ -12,7 +12,7 @@
 
  * do-what-it-says
  
- [**Click here for a demo of _Liri_ in action**](https://youtu.be/y0QbWPcYGxo)
+ [**Click here for a demo of _Liri_ in action**](https://youtu.be/VRInYW5Y5a8)
  
  ## Getting Started 
 
@@ -110,4 +110,4 @@ Below you will find a guide to help you get started and teach you how to run **_
   - [Bands In Town NPM Module](https://www.npmjs.com/package/bandsintown-rest)
   - [Moment NPM Module](https://www.npmjs.com/package/moment)
   
-   [**Click here for a demo of _Liri_ in action**](https://youtu.be/y0QbWPcYGxo)
+   [**Click here for a demo of _Liri_ in action**](https://youtu.be/VRInYW5Y5a8)
